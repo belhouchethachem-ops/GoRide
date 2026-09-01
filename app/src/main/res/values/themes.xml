@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        Tema dell'app (Lez. 2.12).
+        NoActionBar: la barra la gestisce il NavController tramite
+        NavigationUI, non il tema.
+    -->
+    <style name="Theme.GoRide" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="colorPrimary">@color/verde_primario</item>
+        <item name="colorPrimaryVariant">@color/verde_scuro</item>
+        <item name="colorOnPrimary">@color/bianco</item>
+
+        <item name="colorSecondary">@color/arancio_ebike</item>
+        <item name="colorSecondaryVariant">@color/arancio_scuro</item>
+        <item name="colorOnSecondary">@color/bianco</item>
+
+        <item name="android:statusBarColor">@color/verde_scuro</item>
+    </style>
+
+    <!-- Testo grande per gli import: percentuale batteria, timer, costo -->
+    <style name="TextAppearance.GoRide.Valore" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/nero</item>
+    </style>
+
+    <!-- Etichetta sopra un valore -->
+    <style name="TextAppearance.GoRide.Etichetta" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textColor">@color/grigio_testo</item>
+    </style>
+
+    <!-- Bottone principale: 48dp di altezza minima per l'accessibilita' -->
+    <style name="Widget.GoRide.Button" parent="Widget.Material3.Button">
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>

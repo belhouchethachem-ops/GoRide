@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Lez. 2.2 / 2.8 - Data Binding.
+    Il tag <layout> come radice e' obbligatorio: senza, la classe
+    FragmentMapBinding non viene generata.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!--
+            Il ViewModel e' dichiarato come variabile: il layout puo'
+            osservarne le LiveData direttamente, senza passare dal
+            Fragment per ogni aggiornamento.
+        -->
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.example.goride.ui.map.MapViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- La mappa occupa tutto lo schermo (RF1) -->
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map_container"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/cd_mappa"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!--
+            Indicatore di caricamento.
+            android:visibility="@{...}" e' un binding adapter fornito
+            dalla libreria: converte il Boolean della LiveData in
+            VISIBLE / GONE senza una riga di Kotlin nel Fragment.
+        -->
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}"
+            app:indicatorColor="@color/verde_primario"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:visibility="gone" />
+
+        <!-- Ricentra sulla posizione dell'utente -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_posizione"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/cd_posizione"
+            android:src="@android:drawable/ic_menu_mylocation"
+            app:backgroundTint="@color/bianco"
+            app:tint="@color/verde_primario"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

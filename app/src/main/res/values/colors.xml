@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Palette GoRide: verde bici + arancio energia elettrica -->
+
+    <color name="verde_primario">#2E7D32</color>
+    <color name="verde_scuro">#1B5E20</color>
+    <color name="verde_chiaro">#A5D6A7</color>
+
+    <color name="arancio_ebike">#EF6C00</color>
+    <color name="arancio_scuro">#E65100</color>
+    <color name="arancio_chiaro">#FFCC80</color>
+
+    <color name="bianco">#FFFFFF</color>
+    <color name="nero">#000000</color>
+    <color name="grigio_sfondo">#F5F5F5</color>
+    <color name="grigio_testo">#616161</color>
+    <color name="grigio_chiaro">#E0E0E0</color>
+
+    <!-- Stato batteria (RF2.1) -->
+    <color name="batteria_alta">#2E7D32</color>
+    <color name="batteria_media">#F9A825</color>
+    <color name="batteria_bassa">#C62828</color>
+
+    <color name="errore">#C62828</color>
+
+</resources>

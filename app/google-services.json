@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "513015084944",
+    "project_id": "go-ride-a24f7",
+    "storage_bucket": "go-ride-a24f7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:513015084944:android:b33ed6e563a9e328186515",
+        "android_client_info": {
+          "package_name": "com.example.goride"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDniIERDwBe0zLeOe9WyL4zRilYlmRFNW8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

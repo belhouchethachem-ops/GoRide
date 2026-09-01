@@ -1,0 +1,162 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "4fd349ce33c8334034c896408ed08530",
+    "entities": [
+      {
+        "tableName": "corse",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `userId` TEXT NOT NULL, `vehicleId` TEXT NOT NULL, `vehicleNome` TEXT NOT NULL, `vehicleTipo` TEXT NOT NULL, `startTimestamp` INTEGER NOT NULL, `endTimestamp` INTEGER, `minutiPrepagati` INTEGER NOT NULL, `tariffaSbloccoEuro` REAL NOT NULL, `tariffaAlMinutoEuro` REAL NOT NULL, `costoTotaleEuro` REAL NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userId",
+            "columnName": "userId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vehicleId",
+            "columnName": "vehicleId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vehicleNome",
+            "columnName": "vehicleNome",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vehicleTipo",
+            "columnName": "vehicleTipo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startTimestamp",
+            "columnName": "startTimestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endTimestamp",
+            "columnName": "endTimestamp",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "minutiPrepagati",
+            "columnName": "minutiPrepagati",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tariffaSbloccoEuro",
+            "columnName": "tariffaSbloccoEuro",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tariffaAlMinutoEuro",
+            "columnName": "tariffaAlMinutoEuro",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "costoTotaleEuro",
+            "columnName": "costoTotaleEuro",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "corsa_attiva",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `vehicleId` TEXT NOT NULL, `vehicleNome` TEXT NOT NULL, `vehicleTipo` TEXT NOT NULL, `startTimestamp` INTEGER NOT NULL, `scadenzaTimestamp` INTEGER NOT NULL, `minutiPrepagati` INTEGER NOT NULL, `tariffaSbloccoEuro` REAL NOT NULL, `tariffaAlMinutoEuro` REAL NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vehicleId",
+            "columnName": "vehicleId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vehicleNome",
+            "columnName": "vehicleNome",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vehicleTipo",
+            "columnName": "vehicleTipo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startTimestamp",
+            "columnName": "startTimestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "scadenzaTimestamp",
+            "columnName": "scadenzaTimestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "minutiPrepagati",
+            "columnName": "minutiPrepagati",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tariffaSbloccoEuro",
+            "columnName": "tariffaSbloccoEuro",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tariffaAlMinutoEuro",
+            "columnName": "tariffaAlMinutoEuro",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '4fd349ce33c8334034c896408ed08530')"
+    ]
+  }
+}

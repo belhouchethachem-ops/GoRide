@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">GoRide</string>
+
+    <!-- Mappa -->
+    <string name="mappa_titolo">Mezzi nelle vicinanze</string>
+    <string name="mappa_caricamento">Caricamento mezzi…</string>
+    <string name="mappa_errore_caricamento">Impossibile caricare i mezzi. Riprova.</string>
+    <string name="mappa_permesso_titolo">Posizione necessaria</string>
+    <string name="mappa_permesso_messaggio">Serve la tua posizione per mostrarti i mezzi più vicini. Senza, la mappa parte da Ancona centro.</string>
+    <string name="mappa_permesso_ok">Consenti</string>
+    <string name="mappa_permesso_no">Non ora</string>
+
+    <!-- Descrizioni per l'accessibilita' -->
+    <string name="cd_mappa">Mappa dei mezzi disponibili</string>
+    <string name="cd_bici_classica">Bici classica</string>
+    <string name="cd_ebike">Bici elettrica</string>
+    <string name="cd_posizione">Centra sulla mia posizione</string>
+
+    <!-- Dettaglio mezzo -->
+    <string name="dettaglio_batteria">Batteria</string>
+    <string name="dettaglio_autonomia">Autonomia</string>
+    <string name="dettaglio_tariffa_sblocco">Sblocco</string>
+    <string name="dettaglio_tariffa_minuto">Al minuto</string>
+    <string name="dettaglio_sblocca">Sblocca e parti</string>
+
+    <!-- Formati -->
+    <string name="formato_percentuale">%d%%</string>
+    <string name="formato_km">%.0f km</string>
+    <string name="formato_euro">%.2f €</string>
+    <string name="formato_euro_minuto">%.2f €/min</string>
+
+    <string name="login_sottotitolo">Accedi per iniziare a pedalare</string>
+    <string name="login_email">Email</string>
+    <string name="login_password">Password</string>
+    <string name="login_password_dimenticata">Password dimenticata?</string>
+    <string name="login_accedi">Accedi</string>
+    <string name="login_vai_registrazione">Non hai un account? Registrati</string>
+    <string name="registra_titolo">Crea il tuo account</string>
+    <string name="registra_nome">Nome</string>
+    <string name="registra_cognome">Cognome</string>
+    <string name="registra_telefono">Telefono</string>
+    <string name="registra_conferma_password">Conferma password</string>
+    <string name="registra_password_hint">Almeno 6 caratteri</string>
+    <string name="registra_crea_account">Crea account</string>
+    <string name="registra_vai_login">Hai già un account? Accedi</string>
+
+    <string name="recupero_titolo">Recupera la password</string>
+    <string name="recupero_descrizione">Inserisci l\'email del tuo account: ti invieremo un link per impostare una nuova password.</string>
+    <string name="recupero_invia">Invia link di recupero</string>
+    <string name="recupero_indietro">Torna al login</string>
+
+
+    <string name="corsa_in_corso">CORSA IN CORSO</string>
+    <string name="corsa_tempo_residuo">Tempo residuo</string>
+    <string name="corsa_costo_attuale">Costo attuale</string>
+    <string name="corsa_estendi">Estendi corsa</string>
+    <string name="corsa_termina">Termina corsa</string>
+    <string name="corsa_scegli_durata">Quanto tempo vuoi acquistare?</string>
+    <string name="corsa_opzione_durata">%1$d minuti — %2$.2f €</string>
+    <string name="corsa_opzione_estensione">+%1$d minuti — %2$.2f €</string>
+    <string name="corsa_scaduta_titolo">Tempo scaduto</string>
+    <string name="corsa_scaduta_messaggio">Il tempo prepagato è terminato. Vuoi estendere la corsa o terminarla?</string>
+    <string name="corsa_estendi_titolo">Quanto tempo aggiungere?</string>
+    <string name="corsa_termina_titolo">Terminare la corsa?</string>
+    <string name="corsa_termina_messaggio">Il costo finale sarà di %.2f €.</string>
+    <string name="annulla">Annulla</string>
+
+    <string name="storico_titolo">Le tue corse</string>
+    <string name="storico_vuoto_titolo">Nessuna corsa</string>
+    <string name="storico_vuoto_messaggio">Le corse che farai compariranno qui</string>
+    <string name="dettaglio_corsa_titolo">Dettaglio corsa</string>
+    <string name="dettaglio_costo_totale">Costo totale</string>
+    <string name="dettaglio_mezzo">Mezzo utilizzato</string>
+    <string name="dettaglio_durata">Durata</string>
+    <string name="dettaglio_quando">Data e ora</string>
+    <string name="dettaglio_riepilogo">Composizione del costo</string>
+
+    <string name="community_titolo">Community</string>
+    <string name="community_vuota_titolo">Ancora nessuna recensione</string>
+    <string name="community_vuota_messaggio">Sii il primo a lasciare un commento</string>
+    <string name="recensione_guasto">GUASTO</string>
+    <string name="recensione_opinione">OPINIONE</string>
+    <string name="recensione_consiglio">CONSIGLIO</string>
+
+    <string name="community_scrivi">Scrivi</string>
+    <string name="nuova_recensione_titolo">Nuova recensione</string>
+    <string name="nuova_recensione_tipo">Che tipo di contributo?</string>
+    <string name="nuova_recensione_hint">Racconta la tua esperienza…</string>
+    <string name="nuova_recensione_pubblica">Pubblica</string>
+
+    <string name="profilo_titolo">Il tuo profilo</string>
+    <string name="profilo_dati">Dati personali</string>
+    <string name="profilo_salva">Salva modifiche</string>
+    <string name="profilo_logout">Esci</string>
+    <string name="profilo_logout_titolo">Uscire dall\'account?</string>
+    <string name="profilo_logout_messaggio">Dovrai inserire di nuovo email e password al prossimo accesso.</string>
+    <string name="profilo_iscritto_dal">Iscritto dal %s</string>
+
+
+</resources>
+

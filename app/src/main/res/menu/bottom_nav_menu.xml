@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Lez. 2.4 - NavigationUI collega automaticamente il menu al grafo
+    quando l'id della voce coincide con l'id della destinazione.
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mapFragment"
+        android:icon="@android:drawable/ic_dialog_map"
+        android:title="Mappa" />
+    <item
+        android:id="@+id/historyFragment"
+        android:icon="@android:drawable/ic_menu_recent_history"
+        android:title="Storico" />
+    <item
+        android:id="@+id/communityFragment"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="Community" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="Profilo" />
+
+</menu>

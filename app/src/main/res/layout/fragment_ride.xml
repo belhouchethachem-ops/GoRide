@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.goride.ui.ride.RideViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/verde_primario"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/etichetta_stato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:letterSpacing="0.15"
+            android:text="@string/corsa_in_corso"
+            android:textColor="@color/verde_chiaro"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/nome_mezzo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/bianco"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/etichetta_stato"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/etichetta_tempo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            android:text="@string/corsa_tempo_residuo"
+            android:textColor="@color/verde_chiaro"
+            app:layout_constraintTop_toBottomOf="@id/nome_mezzo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!--
+            RF5 - il timer.
+            tempoFormattato e' una Transformation dei millisecondi:
+            il layout non fa calcoli, legge una stringa gia' pronta.
+            fontFeatureSettings="tnum" usa le cifre a larghezza fissa,
+            cosi' il testo non balla a ogni secondo.
+        -->
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFeatureSettings="tnum"
+            android:text="@{viewModel.tempoFormattato}"
+            android:textColor="@color/bianco"
+            android:textSize="72sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/etichetta_tempo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="14:32"
+            xmlns:tools="http://schemas.android.com/tools" />
+
+        <TextView
+            android:id="@+id/etichetta_costo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="@string/corsa_costo_attuale"
+            android:textColor="@color/verde_chiaro"
+            app:layout_constraintTop_toBottomOf="@id/timer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/costo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/bianco"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/etichetta_costo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- RF6.1 - estensione manuale, senza aspettare la scadenza -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bottone_estendi"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:minHeight="48dp"
+            android:text="@string/corsa_estendi"
+            android:textColor="@color/bianco"
+            app:strokeColor="@color/bianco"
+            app:layout_constraintBottom_toTopOf="@id/bottone_termina"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- RF6.2 - termine manuale -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bottone_termina"
+            style="@style/Widget.GoRide.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/bianco"
+            android:text="@string/corsa_termina"
+            android:textColor="@color/verde_primario"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

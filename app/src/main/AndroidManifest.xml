@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ==========================================================
+         PERMESSI
+         Lez. 2.10: i "normal" basta dichiararli qui, i "dangerous"
+         vanno anche richiesti a runtime.
+         ========================================================== -->
+
+    <!-- Normal: concessi automaticamente all'installazione -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Dangerous: richiesti a runtime con l'Activity Result API,
+         nel momento in cui l'utente apre la mappa (RF1) -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- L'app funziona anche senza GPS: fallback su Ancona -->
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GoRide"
+        tools:targetApi="31">
+
+        <!-- ======================================================
+             CHIAVE GOOGLE MAPS
+             ${MAPS_API_KEY} viene sostituito da Gradle leggendo
+             local.properties, cosi' la chiave non finisce mai nel
+             codice versionato.
+             ====================================================== -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+
+        <!-- ======================================================
+             ACTIVITY UNICA
+             Lez. 2.4: Single Activity. Tutte le schermate sono
+             Fragment dentro il NavHost.
+
+             Niente android:configChanges: lo stato vive nel
+             ViewModel, che sopravvive alla rotazione (Lez. 2.7).
+             ====================================================== -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
